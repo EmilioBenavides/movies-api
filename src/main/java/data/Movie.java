@@ -11,10 +11,9 @@ public class Movie {
     private String genre;
     private String plot;
     private String rating;
-    private double imdb;
     private String runtime;
     private String actors;
-    private int year;
+    private Integer year;
     private int id;
 
     public Movie() {
@@ -28,7 +27,6 @@ public class Movie {
         this.genre = genre;
         this.plot = plot;
         this.rating = rating;
-        this.imdb = imdb;
         this.runtime = runtime;
         this.actors = actors;
         this.year = year;
@@ -91,14 +89,6 @@ public class Movie {
         this.rating = rating;
     }
 
-    public double getImdb() {
-        return imdb;
-    }
-
-    public void setImdb(double imdb) {
-        this.imdb = imdb;
-    }
-
     public String getRuntime() {
         return runtime;
     }
@@ -115,7 +105,7 @@ public class Movie {
         this.actors = actors;
     }
 
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
