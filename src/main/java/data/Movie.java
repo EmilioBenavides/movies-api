@@ -10,16 +10,16 @@ public class Movie {
     private String dateReleased;
     private String genre;
     private String plot;
-    private Integer rating;
+    private String rating;
     private String runtime;
     private String actors;
-    private Integer year;
-    private Integer id;
+    private int year;
+    private int id;
 
     public Movie() {
     }
 
-    public Movie(String title, String director, String poster, String dateReleased, String genre, String plot, Integer rating, String runtime, String actors, Integer year, Integer id) {
+    public Movie(String title, String director, String poster, String dateReleased, String genre, String plot, String rating, String runtime, String actors, int year, int id) {
         this.title = title;
         this.director = director;
         this.poster = poster;
@@ -81,11 +81,11 @@ public class Movie {
         this.plot = plot;
     }
 
-    public Integer getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(Integer rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
@@ -105,19 +105,19 @@ public class Movie {
         this.actors = actors;
     }
 
-    public Integer getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(Integer year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
