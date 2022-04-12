@@ -1,7 +1,5 @@
 package data;
 
-import java.net.URL;
-
 public class Movie {
 
     private String title;
@@ -13,13 +11,14 @@ public class Movie {
     private String rating;
     private String runtime;
     private String actors;
-    private int year;
+    private double imdb;
+    private int yearMade;
     private int id;
 
     public Movie() {
     }
 
-    public Movie(String title, String director, String poster, String dateReleased, String genre, String plot, String rating, String runtime, String actors, int year, int id) {
+    public Movie(String title, String director, String poster, String dateReleased, String genre, String plot, String rating, double imdb, String runtime, String actors, int year, int id) {
         this.title = title;
         this.director = director;
         this.poster = poster;
@@ -28,8 +27,9 @@ public class Movie {
         this.plot = plot;
         this.rating = rating;
         this.runtime = runtime;
+        this.imdb = imdb;
         this.actors = actors;
-        this.year = year;
+        this.yearMade = year;
         this.id = id;
     }
 
@@ -105,12 +105,12 @@ public class Movie {
         this.actors = actors;
     }
 
-    public int getYear() {
-        return year;
+    public int getYearMade() {
+        return yearMade;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setYearMade(int yearMade) {
+        this.yearMade = yearMade;
     }
 
     public int getId() {
@@ -119,6 +119,14 @@ public class Movie {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public double getImdb() {
+        return imdb;
+    }
+
+    public void setImdb(double imdb) {
+        this.imdb = imdb;
     }
 
 }

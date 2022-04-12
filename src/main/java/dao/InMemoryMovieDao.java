@@ -1,17 +1,28 @@
-package data;
+package dao;
 
-import java.io.PrintWriter;
+import data.Movie;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InMemoryMovieDao {
+public class InMemoryMovieDao implements MoviesDao {
 
     int nextID = 1;
     ArrayList<Movie> movies = new ArrayList<>();
 
     public List<Movie> all() throws SQLException { //this function will now work on the servlet side
         return movies;
+    }
+
+    @Override
+    public Movie findOne(int id) {
+        return null;
+    }
+
+    @Override
+    public void insert(Movie movie) {
+
     }
 
     public void insertAll(Movie[] movies) throws SQLException {
@@ -71,8 +82,8 @@ public class InMemoryMovieDao {
                 }
 
                 // change movie title to title that was in request body
-                if (newMovie.getYear() != null) {
-                    movie.setYear(newMovie.getYear());
+                if (newMovie.getYearMade() != 0) {
+                    movie.setYearMade(newMovie.getYearMade());
                 }
             }
         }
